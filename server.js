@@ -2,9 +2,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var morgan = require('morgan');
+var cors = require('cors')
 
 // configure app
 app.use(morgan('dev')); // log requests to the console
+app.use(cors());
 
 // configure body parser
 app.use(bodyParser.urlencoded({
